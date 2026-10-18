@@ -5,7 +5,7 @@
     "cover": "/media/tuneshape-approved-blue-20261018.webp",
     "width": 1620,
     "height": 971,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "aievent-web",
@@ -13,7 +13,7 @@
     "cover": "/media/project-03-selected-red-20261018.webp",
     "width": 1620,
     "height": 971,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "reprise",
@@ -21,7 +21,7 @@
     "cover": "/media/project-02-selected-green-20261018.webp",
     "width": 1620,
     "height": 971,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "mac-setup",
@@ -29,7 +29,7 @@
     "cover": "/media/project-05-selected-purple-20261018.webp",
     "width": 1620,
     "height": 971,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "ariadne",
@@ -53,7 +53,7 @@
     "cover": "/media/project-06.webp",
     "width": 1800,
     "height": 1200,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "design-02",
@@ -69,7 +69,7 @@
     "cover": "/media/project-08.webp",
     "width": 1800,
     "height": 1200,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "design-04",
@@ -125,7 +125,7 @@
     "cover": "/media/project-15.webp",
     "width": 1800,
     "height": 1350,
-    "monochrome": true
+    "monochrome": false
   },
   {
     "id": "homegrow-plastic",

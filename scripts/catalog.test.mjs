@@ -40,7 +40,7 @@ test('reordering keeps covers and GitHub destinations attached to their projects
   assert.equal(rows.find(p=>p.id==='aievent-web').cover,base+'media/project-03-selected-red-20261018.webp');
   assert.equal(rows.find(p=>p.id==='reprise').cover,base+'media/project-02-selected-green-20261018.webp');
   assert.equal(rows.find(p=>p.id==='mac-setup').cover,base+'media/project-05-selected-purple-20261018.webp');
-  assert(rows.slice(0,4).every(p=>p.overviewMonochrome));
+  assert(rows.every(p=>p.overviewMonochrome===false),'All work covers retain their original colors');
   for(const [id,name] of [['ariadne','Ariadne'],['reprise','Reprise'],['aix-origin','Spark'],['mac-setup','Mac Setup']]){
    const project=rows.find(p=>p.id===id),repo=githubProjects.find(p=>p.name===name);
    assert.equal(project.resources[0].href,repo.url);assert.equal(project.description[1],lang==='en'?repo.detailEn:repo.detailZh);

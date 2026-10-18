@@ -18,7 +18,7 @@
 - 项目详情：图片放大、可返回的导航、GitHub 与 README 入口。
 - 中英文切换、手机布局与减少动态效果偏好。
 
-精选顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。五个真实公开项目保留对应介绍，其余条目使用封面和 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
+精选顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。仅首页精选封面默认灰度、悬停显色；All work 和详情页封面保留原色。五个真实公开项目保留对应介绍，其余条目使用封面和 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
 
 ## 本地运行
 

@@ -168,7 +168,7 @@ export function renderProjectDetail({ project, index = 0, projects = [], preserv
   const category = project.category;
   const frames = [project.cover].map(src => ({
     ...(project.media[src] || {}), src, label: project.media[src]?.note || project.title,
-    monochrome: ['tuneshape','aievent-web','reprise','mac-setup'].includes(project.id),
+    monochrome: false,
   }));
   const facts = project.facts || [];
   const next = projects.length > 1 ? projects[(index + 1) % projects.length] : null;
