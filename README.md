@@ -1,107 +1,171 @@
 # orocoa_web
 
-**orocoaweb** — an interactive portfolio by [orocoa](https://github.com/orocoa), with a point-cloud opening, a scrolling device transition and a cover carousel.
+**English** · [简体中文](README.zh-CN.md)
 
-一份可以直接运行和修改的个人网站模板。保留完整的浏览与动效体验，使用演示文案和公开 GitHub 项目展示内容。
+[![CI](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml)
 
-[在线预览](https://webdemo.kai-nex.com/) · [查看源码](https://github.com/orocoa/orocoa_web) · [页面截图](#页面截图) · [English quick start](#quick-start)
+An interactive portfolio website and reusable static template by [orocoa](https://github.com/orocoa). It brings together a point-cloud introduction, device transitions, a project gallery, and English / Chinese content in one continuous browsing experience.
 
-## 在线预览
+[Live demo](https://webdemo.kai-nex.com/) · [Screenshots](#screenshots) · [Quick start](#quick-start) · [Report an issue](https://github.com/orocoa/orocoa_web/issues)
 
-**Demo：[webdemo.kai-nex.com](https://webdemo.kai-nex.com/)**
+![orocoa_web homepage with a computer point cloud and the greeting “Hello, I’m orocoa”](docs/preview-home.png)
 
-这是本仓库的在线演示站，可以直接体验点云开场、滚动转场、精选作品和 All work 轮播，无需登录。项目详情使用演示文案和公开 GitHub 项目内容，也可以继续前往对应仓库查看 README。
+## Overview
 
-![orocoa_web interactive portfolio preview](docs/preview-home.png)
+Use **orocoa_web**, also written as **orocoaweb**, as a starting point for your own portfolio or to explore how its interactions work. The site uses HTML, CSS, JavaScript modules, Three.js, GSAP, and Lenis. Browser libraries and fonts are included in the repository; running it requires no dependency installation, database, account, or API key.
 
-如果这个项目对你有帮助，欢迎给 **orocoa_web** 一个 Star。也欢迎在 Demo 中继续探索 TuneShape、? / Shift、Reprise 和 Mac Setup。
+**Live demo: [webdemo.kai-nex.com](https://webdemo.kai-nex.com/)**
 
-## 你可以体验什么
+The preview runs this public website template with demo copy, presentation covers, and public GitHub project links. This repository contains the website implementation; the applications it links to are maintained in their own repositories.
 
-- 点云首页：鼠标经过时散开，停止后归位。
-- 首页滚动：精选项目、设备转场与最后一页介绍衔接在同一条浏览路径中。
-- 项目总览：19 张封面、轮播选择、键盘与触摸交互。
-- 项目详情：图片放大、可返回的导航、GitHub 与 README 入口。
-- 中英文切换、手机布局与减少动态效果偏好。
+## Contents
 
-精选顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。仅首页精选封面默认灰度、悬停显色；All work 和详情页封面保留原色。五个真实公开项目保留对应介绍，其余条目使用封面和 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Quick start](#quick-start)
+- [Project structure](#project-structure)
+- [Customization](#customization)
+- [Development](#development)
+- [Deployment](#deployment)
+- [Contributing and support](#contributing-and-support)
+- [Public content and assets](#public-content-and-assets)
+- [License and credits](#license-and-credits)
 
-## 页面截图
+## Features
 
-以下截图来自当前开源版在浏览器中的实际运行画面；点击图片可查看大图。在线 Demo 可能稍晚于源码更新。
+- **Point-cloud opening:** points react to pointer movement and return when the pointer stops.
+- **Continuous homepage:** Selected work, a device transition, and the closing Profile section share a scroll sequence.
+- **Project browsing:** 19 cover entries, a WebGL carousel, project selection, keyboard navigation, and touch interaction.
+- **Project details:** cover enlargement, return navigation, and links to GitHub repositories and READMEs.
+- **Language and layout:** English / Chinese switching, phone layouts, and support for reduced-motion preferences.
 
-| 精选作品 · Selected work | 全部作品 · All work |
+Selected work follows **TuneShape → ? / Shift → Reprise → Mac Setup**. TuneShape is also the first entry in All work. Selected covers start in grayscale and reveal color on hover; All work and detail covers retain their original colors. Five public projects have their own introductions; other entries use demo copy. Report controls open GitHub recommendations instead of original PDFs.
+
+<a id="页面截图"></a>
+
+## Screenshots
+
+These are browser captures of the current public template. Click any image to view it at full size.
+
+| Selected work | All work |
 | --- | --- |
-| [![精选作品：四张灰度封面与项目介绍](docs/preview-selected.png)](docs/preview-selected.png) | [![All work：保留原色的项目封面轮播](docs/preview-all-work.png)](docs/preview-all-work.png) |
-| **项目详情 · Project** | **最后一页 · Profile** |
-| [![TuneShape 项目详情与 GitHub、README 入口](docs/preview-project.png)](docs/preview-project.png) | [![演示介绍与开源项目链接](docs/preview-profile.png)](docs/preview-profile.png) |
+| [![Selected work with four grayscale project covers](docs/preview-selected.png)](docs/preview-selected.png) | [![All work carousel with project covers in color](docs/preview-all-work.png)](docs/preview-all-work.png) |
+| **Project details** | **Profile** |
+| [![TuneShape project details with repository and README links](docs/preview-project.png)](docs/preview-project.png) | [![Closing demo text and open-source project links](docs/preview-profile.png)](docs/preview-profile.png) |
 
-## 本地运行
+## Quick start
 
-需要 **Node.js 22+**，无需安装依赖或配置密钥：
+### Requirements
+
+- [Node.js](https://nodejs.org/) **22 or newer**.
+- Git, if you clone the repository. You can also download and extract the source ZIP from GitHub.
+
+### Run locally
 
 ```sh
+git clone https://github.com/orocoa/orocoa_web.git
+cd orocoa_web
 node scripts/serve.mjs
 ```
 
-打开 <http://127.0.0.1:4321/webdemo/>。如端口被占用，可以指定另一个端口：
+Open **[http://127.0.0.1:4321/webdemo/](http://127.0.0.1:4321/webdemo/)**.
 
-```sh
-PORT=4325 node scripts/serve.mjs
+No `npm install` step is required. The server prepares the public files in memory and listens on the loopback address. **Restart it after editing source files**; it does not provide hot reload.
+
+| Environment variable | Default | Purpose |
+| --- | --- | --- |
+| `PORT` | `4321` | Local preview port. |
+| `DEMO_BASE` | `/webdemo/` | Deployment prefix for the local preview. Supports `/` or one lowercase directory such as `/webdemo/`. |
+
+## Project structure
+
+```text
+.
+├── dist/                     # Maintained website source and bundled browser assets
+│   ├── index.html            # Homepage and Selected work markup
+│   ├── home/                 # Opening point cloud and greeting
+│   ├── fields/               # Selected work copy and interaction
+│   ├── profile/              # Closing section and localized copy
+│   ├── project/              # All work carousel and project details
+│   ├── content/              # Project catalog and localized metadata
+│   ├── assets/               # Shared modules and GitHub recommendations
+│   ├── media/                # Presentation covers and derivatives
+│   └── vi/                   # Shared styles, fonts, and motion
+├── scripts/                  # Preview, validation, tests, and static export
+├── docs/                     # README screenshots
+├── LICENSES/                 # Third-party license notices
+└── .github/workflows/ci.yml   # Source checks and static export validation
 ```
 
-### Quick start
+`dist/` is the source of truth in this repository. The build creates a snapshot under `output/releases/`; it does not regenerate or overwrite `dist/`. Generated output is ignored by Git.
 
-Requires Node.js 22 or newer. Clone this repository, run `node scripts/serve.mjs`, then open `http://127.0.0.1:4321/webdemo/`. No package install, database, API key or cloud account is required. The animation runs in the visitor's browser.
+## Customization
 
-## 修改内容
-
-直接编辑 `dist/`，构建不会覆盖源文件。
-
-| 位置 | 内容 |
+| File or directory | What to change |
 | --- | --- |
-| `dist/index.html` | 首页问候、精选项目、英文介绍 |
-| `dist/profile/copy.js` | 最后一页中文介绍与双语标签 |
-| `dist/fields/fields.js` | 精选项目的双语文案 |
-| `dist/content/projects.json` | 项目顺序、封面及尺寸 |
-| `dist/content/display.json` | 项目双语名称和分类 |
-| `dist/content/tuneshape.json` | TuneShape 的封面、文案与链接 |
-| `dist/project/data.js` | 详情页的 Demo 内容和项目适配 |
-| `dist/assets/recommendations.js` | GitHub 推荐与公开仓库地址 |
-| `dist/media/` | 展示封面与小尺寸衍生图 |
-| `dist/vi/` | 颜色、字体、控件与页面动效 |
+| `dist/index.html` | Greeting, Selected work links and images, and English Profile text. |
+| `dist/fields/fields.js` | Localized Selected work descriptions. |
+| `dist/profile/copy.js` | Chinese Profile text and localized labels. |
+| `dist/content/projects.json` | Catalog order, cover paths, dimensions, and All work grayscale flags. |
+| `dist/content/display.json` | Localized project names, categories, and years. |
+| `dist/content/tuneshape.json` | TuneShape cover, introduction, and destinations. |
+| `dist/project/data.js` | Project detail content and catalog adaptation. |
+| `dist/assets/recommendations.js` | Public GitHub project recommendations. |
+| `dist/media/` | Your own authorized cover artwork. |
+| `dist/vi/` | Shared styles, fonts, and motion. |
 
-先用你有权公开的文字和图片替换演示内容，再检查中英文和手机布局。修改中文后，如需更新字体子集，见 [PREPARE-RELEASE.md](PREPARE-RELEASE.md)。
+Replace the demo copy, destinations, and display artwork with content you are entitled to publish. Keep cover paths consistent between the homepage and catalog, then check both languages and phone layouts. Chinese copy changes may require refreshing the bundled font subset; see [PREPARE-RELEASE.md](PREPARE-RELEASE.md).
 
-## 检查与导出
+## Development
+
+Run the same checks used by CI:
 
 ```sh
 node scripts/check.mjs
 node --test scripts/*.test.mjs
 node scripts/release-ready.mjs
+```
+
+The checks validate source syntax, runtime dependencies, catalog records, image metadata, navigation, and deployment paths. CI also validates a root-path static export on Node.js 22. For visual changes, check the affected desktop and phone interactions in a browser; automated checks do not replace visual review.
+
+## Deployment
+
+Export for a domain root:
+
+```sh
 node scripts/build-demo.mjs --base=/
 ```
 
-最后一条命令会输出 `output/releases/<hash>/site/`。把这个 **site 目录**部署到独立的静态托管项目即可。`--base=/webdemo/` 用于子路径预览；两种路径都有自动检查。
+Or export for a subpath:
 
-GitHub Actions 会检查源文件、测试和静态导出。使用其他托管平台时，请按 [SECURITY.md](SECURITY.md) 配置响应头及真实 404。详细发布步骤见 [PREPARE-RELEASE.md](PREPARE-RELEASE.md)。
+```sh
+node scripts/build-demo.mjs --base=/webdemo/
+```
 
-## 公开内容与素材
+The command prints the resulting **`output/releases/<hash>/site/`** directory. Publish only that directory to your static host. For a subpath deployment, keep the exported directory structure and configure the host to serve the selected prefix.
 
-这个仓库包含公开昵称、GitHub 链接、演示文案和展示封面。它不包含原始报告/PDF、私有相册、联系方式、二维码、云账号配置、凭据或原站 Git 历史。
+The export includes `edgeone.json` with response headers for EdgeOne Makers. Other hosts need equivalent headers and a real 404 response for missing files. GitHub Actions validates the source and export; it does **not** deploy the live demo. See [PREPARE-RELEASE.md](PREPARE-RELEASE.md) and [SECURITY.md](SECURITY.md) for the full process.
 
-封面可能包含作品名称、品牌或缩略图。复用模板时，请换成你自己的授权素材。**代码许可证不授予封面、照片或第三方品牌的使用权。** 素材和设备几何体的边界见 [ASSETS.md](ASSETS.md) 与 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+## Contributing and support
 
-网站不需要 GitHub token，不自动 Star，不添加追踪像素。点击普通链接后才会前往 GitHub 或主站。
+Bug reports and focused improvements are welcome. Open an [issue](https://github.com/orocoa/orocoa_web/issues) with steps to reproduce, the expected and actual behavior, and your browser / screen size. For a visual issue, an appropriate screenshot helps.
 
-## 许可与来源
+Before submitting a pull request, read [CONTRIBUTING.md](CONTRIBUTING.md) and run the checks above. Keep private records, credentials, and unrelated project code out of issues and contributions. Security and publication considerations are documented in [SECURITY.md](SECURITY.md).
 
-原创网站代码使用 [MIT License](LICENSE)。Three.js、Lenis、Viscose carousel、字体与设备几何体保留各自的来源及许可。GSAP 使用单独的 Standard License，整个依赖栈并非全部 MIT。
+## Public content and assets
 
-项目轮播改编自 [Yousuf-developer/Viscose-carousel](https://github.com/Yousuf-developer/Viscose-carousel)，原作者和许可完整保留。查看 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 [LICENSES/](LICENSES/) 获取完整说明。
+The public template includes demo text, public project names, GitHub links, and presentation covers. Original reports and PDFs, private albums, contact details, cloud credentials, production bindings, and the original website's Git history are excluded.
 
-## 反馈与参与
+The website does not require a GitHub token, add analytics pixels, or automatically star repositories. Visitors choose whether to follow a project link and give it a Star on GitHub.
 
-欢迎通过 [Issues](https://github.com/orocoa/orocoa_web/issues) 提交问题或通过 Pull Request 改进模板。开始前可阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+**The code license does not grant rights to portfolio covers, photos, trademarks, or all included geometry.** Replace presentation assets before using the template as your own portfolio. See [ASSETS.md](ASSETS.md) for the asset boundaries and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for individual notices.
 
-项目名称为 **orocoa_web**，也写作 **orocoaweb**。作者为 **orocoa**。
+## License and credits
+
+- Original website code and documentation: [MIT License](LICENSE).
+- Third-party code, fonts, and device geometry: their respective licenses, retained in [LICENSES/](LICENSES/) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). GSAP uses the GSAP Standard License and is not covered by this project's MIT license.
+- Portfolio artwork, photographs, brands, and the computer point cloud: subject to the separate boundaries in [ASSETS.md](ASSETS.md).
+
+The project carousel adapts [Yousuf-developer/Viscose-carousel](https://github.com/Yousuf-developer/Viscose-carousel). Three.js, Lenis, GSAP, fonts, and device geometry are credited in the third-party notices. Upstream copyright and license notices are retained.
+
+Maintained by [orocoa](https://github.com/orocoa). If this template is useful to you, consider giving **orocoa_web** a Star.
