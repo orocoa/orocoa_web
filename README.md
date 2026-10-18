@@ -4,7 +4,13 @@
 
 一份可以直接运行和修改的个人网站模板。保留完整的浏览与动效体验，使用演示文案和公开 GitHub 项目展示内容。
 
-[在线体验](https://webdemo.kai-nex.com/) · [查看源码](https://github.com/orocoa/orocoa_web) · [English quick start](#quick-start)
+[在线预览](https://webdemo.kai-nex.com/) · [查看源码](https://github.com/orocoa/orocoa_web) · [页面截图](#页面截图) · [English quick start](#quick-start)
+
+## 在线预览
+
+**Demo：[webdemo.kai-nex.com](https://webdemo.kai-nex.com/)**
+
+这是本仓库的在线演示站，可以直接体验点云开场、滚动转场、精选作品和 All work 轮播，无需登录。项目详情使用演示文案和公开 GitHub 项目内容，也可以继续前往对应仓库查看 README。
 
 ![orocoa_web interactive portfolio preview](docs/preview-home.png)
 
@@ -19,6 +25,16 @@
 - 中英文切换、手机布局与减少动态效果偏好。
 
 精选顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。仅首页精选封面默认灰度、悬停显色；All work 和详情页封面保留原色。五个真实公开项目保留对应介绍，其余条目使用封面和 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
+
+## 页面截图
+
+以下截图来自当前开源版在浏览器中的实际运行画面；点击图片可查看大图。在线 Demo 可能稍晚于源码更新。
+
+| 精选作品 · Selected work | 全部作品 · All work |
+| --- | --- |
+| [![精选作品：四张灰度封面与项目介绍](docs/preview-selected.png)](docs/preview-selected.png) | [![All work：保留原色的项目封面轮播](docs/preview-all-work.png)](docs/preview-all-work.png) |
+| **项目详情 · Project** | **最后一页 · Profile** |
+| [![TuneShape 项目详情与 GitHub、README 入口](docs/preview-project.png)](docs/preview-project.png) | [![演示介绍与开源项目链接](docs/preview-profile.png)](docs/preview-profile.png) |
 
 ## 本地运行
 
