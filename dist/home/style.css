@@ -1,0 +1,40 @@
+:root{color-scheme:dark;background:var(--vi-site-background);color:var(--vi-surface);font-family:var(--vi-font-ui);font-synthesis:none;--hello-size:clamp(70px,14.2vw,220px);--name-size:clamp(35px,7.2vw,112px)}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--vi-site-background)}
+body{-webkit-font-smoothing:antialiased}
+.homepage{width:100%;height:100%;height:100dvh;position:relative;isolation:isolate;background:var(--vi-site-background)}
+#stage{position:absolute;inset:0;background:var(--vi-site-background)}
+#cloud{display:block;width:100%;height:100%;cursor:default}
+#status{position:absolute;left:8vw;top:50%;margin:0;color:var(--vi-inverse-secondary);font-size:12px;pointer-events:none}
+.greeting{position:absolute;z-index:2;left:33.7%;top:50%;transform:translateY(-50%);width:max-content;max-width:61%;cursor:default;isolation:isolate}
+h1{font-family:inherit;font-weight:600;letter-spacing:-.035em;margin:0;padding:0;white-space:nowrap;font-kerning:normal;display:grid;justify-items:start;text-align:left}
+.hello,.name{display:block;width:max-content;color:var(--vi-surface);position:relative;text-align:left}
+.hello{font-size:var(--hello-size);line-height:.98;letter-spacing:-.04em}
+.name{font-size:var(--name-size);line-height:1.05;letter-spacing:-.025em;margin-top:5px;margin-inline-start:var(--greeting-name-offset,0px)}
+.greeting[data-language='en']{--greeting-name-offset:.076em}
+.greeting[data-language='zh'] .hello{font-size:calc(var(--hello-size)*.92);line-height:1.08;letter-spacing:-.07em}
+.greeting[data-language='zh']{--greeting-name-offset:.014em}
+.greeting[data-language='zh'] .name{font-size:calc(var(--name-size)*.91);line-height:1.15;letter-spacing:-.035em}
+.scramble-source{opacity:1}
+.is-scrambling .scramble-source{opacity:0}
+.scramble-overlay{position:absolute;inset:0;pointer-events:none;user-select:none;white-space:pre}
+.scramble-glyph{position:absolute;top:0;display:block;text-align:center;white-space:pre;font:inherit;letter-spacing:inherit}
+.languages{position:absolute;z-index:5;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;width:38px;padding:6px 0;background:transparent;gap:1px}
+.languages button{font:400 12px/1 var(--vi-font-ui);letter-spacing:.015em;width:38px;height:31px;padding:0;display:flex;align-items:center;justify-content:center;color:var(--vi-inverse-secondary);border:0;background:none;cursor:pointer;writing-mode:horizontal-tb;text-orientation:mixed;transform:none;transition:color .15s}
+.languages button[aria-pressed='true'],.languages button:hover{color:var(--vi-surface)}
+.language-divider{height:1px;width:10px;background:var(--vi-inverse-line);flex:none}
+.languages button:focus-visible{outline:1px solid white;outline-offset:1px}
+[hidden]{display:none!important}
+@media(min-width:1600px){:root{--hello-size:clamp(220px,13.75vw,290px);--name-size:clamp(112px,7vw,148px)}}
+@media (max-width:700px) and (max-aspect-ratio:3/4), (max-height:500px) and (min-aspect-ratio:4/3) and (pointer:coarse){:root{--hello-size:clamp(58px,15.8vw,95px);--name-size:clamp(30px,7.8vw,47px)}.greeting{left:12%;top:44%;max-width:80%}.name{margin-top:8px}.languages{right:22px;top:50%;width:34px}.languages button{width:34px;height:34px;font-size:11px}}
+@media(max-height:450px) and (min-width:601px){:root{--hello-size:clamp(65px,19vh,100px);--name-size:clamp(33px,9.5vh,52px)}}
+@media(prefers-reduced-motion:reduce){.languages button{transition:none}}
+
+.scramble-glyph{text-align:left;transition:color 140ms linear}
+.scramble-glyph.is-noisy{color:var(--glyph-accent)}
+.scramble-glyph.is-framed::after{content:'';position:absolute;inset:10% 0 8%;border:1px solid currentColor;opacity:.32;pointer-events:none;transition:opacity 140ms linear}
+.scramble-glyph.is-fading{color:var(--vi-surface)}
+.scramble-glyph.is-fading::after{opacity:0}
+@media(prefers-reduced-motion:reduce){.scramble-glyph,.scramble-glyph::after{transition:none}}
+.scramble-overlay{visibility:hidden}
+.is-scrambling .scramble-overlay{visibility:visible}

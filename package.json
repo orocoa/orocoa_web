@@ -1,0 +1,20 @@
+{
+  "name": "orocoa-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "orocoa_web / orocoaweb — orocoa's open-source interactive portfolio template.",
+  "homepage": "https://webdemo.kai-nex.com/",
+  "repository": {"type":"git","url":"https://github.com/orocoa/orocoa_web.git"},
+  "keywords": ["orocoa", "orocoaweb", "orocoa_web", "portfolio", "interactive-website", "threejs", "webgl"],
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/check.mjs && node scripts/build-demo.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "release:ready": "node scripts/check.mjs && node --test scripts/*.test.mjs && node scripts/release-ready.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

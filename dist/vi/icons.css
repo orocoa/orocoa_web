@@ -1,0 +1,18 @@
+/* Generated; geometry is owned by vi/manifest.json. */
+.vi-icon { display:inline-block; flex:0 0 auto; width:var(--vi-icon-small); height:var(--vi-icon-small); background:currentColor; vertical-align:middle; mask:var(--vi-icon-image) center / contain no-repeat; -webkit-mask:var(--vi-icon-image) center / contain no-repeat; }
+.vi-icon[data-icon="chevron-left"] { --vi-icon-image:url("/vi/icons/chevron-left.svg"); }
+.vi-icon[data-icon="chevron-right"] { --vi-icon-image:url("/vi/icons/chevron-right.svg"); }
+.vi-icon[data-icon="chevron-down"] { --vi-icon-image:url("/vi/icons/chevron-down.svg"); }
+.vi-icon[data-icon="close"] { --vi-icon-image:url("/vi/icons/close.svg"); }
+.vi-icon[data-icon="plus"] { --vi-icon-image:url("/vi/icons/plus.svg"); }
+.vi-icon[data-icon="minus"] { --vi-icon-image:url("/vi/icons/minus.svg"); }
+.vi-icon[data-icon="send"] { --vi-icon-image:url("/vi/icons/send.svg"); }
+.vi-icon[data-icon="check"] { --vi-icon-image:url("/vi/icons/check.svg"); }
+.vi-icon[data-icon="arrow-up-right"] { --vi-icon-image:url("/vi/icons/arrow-up-right.svg"); }
+.vi-icon[data-icon="arrow-down"] { --vi-icon-image:url("/vi/icons/arrow-down.svg"); }
+.vi-icon[data-icon="arrow-up"] { --vi-icon-image:url("/vi/icons/arrow-up.svg"); }
+.vi-icon[data-icon="check-circle"] { --vi-icon-image:url("/vi/icons/check-circle.svg"); }
+.vi-icon[data-icon="loader"] { --vi-icon-image:url("/vi/icons/loader.svg"); }
+.vi-icon[data-icon="sliders"] { --vi-icon-image:url("/vi/icons/sliders.svg"); }
+.vi-icon[data-icon="menu"] { --vi-icon-image:url("/vi/icons/menu.svg"); }
+.vi-icon[data-icon="grid"] { --vi-icon-image:url("/vi/icons/grid.svg"); }

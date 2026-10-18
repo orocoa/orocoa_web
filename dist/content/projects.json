@@ -1,0 +1,154 @@
+[
+  {
+    "id": "tuneshape",
+    "group": "code",
+    "cover": "/media/tuneshape-approved-blue-20261018.webp",
+    "width": 1620,
+    "height": 971,
+    "monochrome": true
+  },
+  {
+    "id": "aievent-web",
+    "group": "code",
+    "cover": "/media/project-03-selected-red-20261018.webp",
+    "width": 1620,
+    "height": 971,
+    "monochrome": true
+  },
+  {
+    "id": "reprise",
+    "group": "code",
+    "cover": "/media/project-02-selected-green-20261018.webp",
+    "width": 1620,
+    "height": 971,
+    "monochrome": true
+  },
+  {
+    "id": "mac-setup",
+    "group": "code",
+    "cover": "/media/project-05-selected-purple-20261018.webp",
+    "width": 1620,
+    "height": 971,
+    "monochrome": true
+  },
+  {
+    "id": "ariadne",
+    "group": "code",
+    "cover": "/media/project-01.webp",
+    "width": 1440,
+    "height": 960,
+    "monochrome": false
+  },
+  {
+    "id": "aix-origin",
+    "group": "code",
+    "cover": "/media/project-04.webp",
+    "width": 1536,
+    "height": 1024,
+    "monochrome": false
+  },
+  {
+    "id": "design-01",
+    "group": "design",
+    "cover": "/media/project-06.webp",
+    "width": 1800,
+    "height": 1200,
+    "monochrome": true
+  },
+  {
+    "id": "design-02",
+    "group": "design",
+    "cover": "/media/project-07.webp",
+    "width": 1800,
+    "height": 1022,
+    "monochrome": false
+  },
+  {
+    "id": "design-03",
+    "group": "design",
+    "cover": "/media/project-08.webp",
+    "width": 1800,
+    "height": 1200,
+    "monochrome": true
+  },
+  {
+    "id": "design-04",
+    "group": "design",
+    "cover": "/media/project-09.webp",
+    "width": 1024,
+    "height": 586,
+    "monochrome": false
+  },
+  {
+    "id": "design-05",
+    "group": "design",
+    "cover": "/media/project-10.webp",
+    "width": 1536,
+    "height": 1024,
+    "monochrome": false
+  },
+  {
+    "id": "design-06",
+    "group": "design",
+    "cover": "/media/project-11.webp",
+    "width": 1800,
+    "height": 1270,
+    "monochrome": false
+  },
+  {
+    "id": "design-07",
+    "group": "design",
+    "cover": "/media/project-12.webp",
+    "width": 2400,
+    "height": 1698,
+    "monochrome": false
+  },
+  {
+    "id": "design-08",
+    "group": "design",
+    "cover": "/media/project-13.webp",
+    "width": 1800,
+    "height": 1270,
+    "monochrome": false
+  },
+  {
+    "id": "design-09",
+    "group": "design",
+    "cover": "/media/project-14.webp",
+    "width": 1800,
+    "height": 1270,
+    "monochrome": false
+  },
+  {
+    "id": "story-catchers",
+    "group": "practice",
+    "cover": "/media/project-15.webp",
+    "width": 1800,
+    "height": 1350,
+    "monochrome": true
+  },
+  {
+    "id": "homegrow-plastic",
+    "group": "practice",
+    "cover": "/media/project-16.webp",
+    "width": 2200,
+    "height": 1558,
+    "monochrome": false
+  },
+  {
+    "id": "photography",
+    "group": "practice",
+    "cover": "/media/project-17.webp",
+    "width": 1536,
+    "height": 1024,
+    "monochrome": false
+  },
+  {
+    "id": "mupahkc",
+    "group": "practice",
+    "cover": "/media/project-18.webp",
+    "width": 1619,
+    "height": 971,
+    "monochrome": false
+  }
+]

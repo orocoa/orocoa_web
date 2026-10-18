@@ -1,0 +1,27 @@
+// Generated: Canvas and Three.js share the CSS palette.
+export const palette = Object.freeze({
+  "canvas": "#fafafa",
+  "surface": "#ffffff",
+  "ink": "#111111",
+  "muted": "#666666",
+  "text-secondary": "#666666",
+  "line": "#d9d9d9",
+  "action": "#111111",
+  "action-hover": "#333333",
+  "focus": "#2447d8",
+  "processing": "#2447d8",
+  "conversation": "#f2f2f2",
+  "dialog": "#ffffff",
+  "danger": "#111111",
+  "error": "#111111",
+  "warning": "#666666",
+  "folder-back": "#e8e8e8",
+  "folder-front": "#fafafa",
+  "folder-transition": "#ededed",
+  "folder-paper-back": "#f0f0f0",
+  "folder-paper-mid": "#f5f5f5",
+  "site-background": "#000000",
+  "shadow-soft": "rgba(17,17,17,.10)",
+  "shadow-medium": "rgba(17,17,17,.22)",
+  "shadow-clear": "rgba(17,17,17,0)"
+});

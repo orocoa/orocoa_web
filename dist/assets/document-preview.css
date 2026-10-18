@@ -1,0 +1,17 @@
+/* The public report notice never fetches report content. */
+.report-notice{box-sizing:border-box;width:min(600px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:64px 44px 44px;border:0;background:var(--vi-surface);color:var(--vi-ink);font-family:var(--vi-font-ui)}
+.report-notice::backdrop{background:var(--vi-backdrop)}
+.report-notice-close{position:absolute;top:16px;right:16px}
+.report-notice-label{margin:0 0 24px;color:var(--vi-muted);font-size:13px;letter-spacing:.08em}
+.report-notice h2{font-size:clamp(26px,4vw,38px);line-height:1.2;font-weight:550;letter-spacing:-.035em;margin:0 0 20px}
+.report-notice-description{font-size:16px;line-height:1.7;margin:0 0 32px}
+.report-notice a{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-underline-offset:5px}
+@media(max-width:520px){.report-notice{padding:60px 24px 28px}}
+.github-projects{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:18px}
+.github-projects a{display:grid;gap:4px;text-decoration:none;line-height:1.5;min-height:44px}
+.github-projects strong{font-size:18px;font-weight:550}
+.github-projects span{font-size:14px;color:var(--vi-muted)}
+.github-projects a:hover strong,.github-projects a:focus-visible strong{text-decoration:underline;text-underline-offset:5px}
+.report-notice-footnote{font-size:13px;line-height:1.6;color:var(--vi-muted);margin:0 0 12px}
+
+html.report-notice-open{overflow:hidden}

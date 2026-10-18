@@ -1,0 +1,178 @@
+{
+  "generator": "Retopology and alignment repairs of retained licensed device models",
+  "mac": {
+    "width": 5.6,
+    "depth": 3.84919,
+    "hinge": [
+      0,
+      0.086,
+      -1.89556
+    ],
+    "lidFrontZ": 0.0002,
+    "screen": {
+      "width": 5.25,
+      "height": 3.35,
+      "center": [
+        0,
+        1.92,
+        0.0015
+      ],
+      "radius": 0.075
+    }
+  },
+  "ipad": {
+    "width": 5.1,
+    "height": 3.68,
+    "thickness": 0.095,
+    "radius": 0.29,
+    "screen": {
+      "width": 4.78,
+      "height": 3.36,
+      "center": [
+        0,
+        0,
+        0.0485
+      ],
+      "radius": 0.14
+    }
+  },
+  "repair": {
+    "sourceKeyCount": 63,
+    "functionKeyCount": 14,
+    "keyCount": 77,
+    "sourceLidTilt": -0.014416934572464539,
+    "sourceFrontZ": -0.05630376531234849
+  },
+  "meshes": [
+    {
+      "name": "MacBook_keyboard_keys",
+      "group": "mac",
+      "material": "keys",
+      "vertices": 2439,
+      "indices": 2439,
+      "positionOffset": 0,
+      "normalOffset": 29268,
+      "indexOffset": 58536
+    },
+    {
+      "name": "MacBook_keyboard_key_edges",
+      "group": "mac",
+      "material": "key-edge",
+      "vertices": 5802,
+      "indices": 5802,
+      "positionOffset": 68292,
+      "normalOffset": 137916,
+      "indexOffset": 207540
+    },
+    {
+      "name": "MacBook_screen_aluminium",
+      "group": "lid",
+      "material": "lid-shell",
+      "vertices": 375,
+      "indices": 375,
+      "positionOffset": 230748,
+      "normalOffset": 235248,
+      "indexOffset": 239748
+    },
+    {
+      "name": "MacBook_screen_edge",
+      "group": "lid",
+      "material": "lid-edge",
+      "vertices": 648,
+      "indices": 648,
+      "positionOffset": 241248,
+      "normalOffset": 249024,
+      "indexOffset": 256800
+    },
+    {
+      "name": "MacBook_screen_matte.001",
+      "group": "lid",
+      "material": "bezel",
+      "vertices": 129,
+      "indices": 129,
+      "positionOffset": 259392,
+      "normalOffset": 260940,
+      "indexOffset": 262488
+    },
+    {
+      "name": "MacBook_base_deck",
+      "group": "mac",
+      "material": "deck",
+      "vertices": 480,
+      "indices": 480,
+      "positionOffset": 263004,
+      "normalOffset": 268764,
+      "indexOffset": 274524
+    },
+    {
+      "name": "MacBook_base_side",
+      "group": "mac",
+      "material": "deck-side",
+      "vertices": 1221,
+      "indices": 1221,
+      "positionOffset": 276444,
+      "normalOffset": 291096,
+      "indexOffset": 305748
+    },
+    {
+      "name": "MacBook_base_finger_recess",
+      "group": "mac",
+      "material": "recess",
+      "vertices": 243,
+      "indices": 243,
+      "positionOffset": 310632,
+      "normalOffset": 313548,
+      "indexOffset": 316464
+    },
+    {
+      "name": "MacBook_base_trackpad",
+      "group": "mac",
+      "material": "trackpad",
+      "vertices": 126,
+      "indices": 126,
+      "positionOffset": 317436,
+      "normalOffset": 318948,
+      "indexOffset": 320460
+    },
+    {
+      "name": "iPad_body_edge",
+      "group": "ipad",
+      "material": "ipad-edge",
+      "vertices": 1224,
+      "indices": 1224,
+      "positionOffset": 320964,
+      "normalOffset": 335652,
+      "indexOffset": 350340
+    },
+    {
+      "name": "iPad_body_back",
+      "group": "ipad",
+      "material": "ipad-frame",
+      "vertices": 198,
+      "indices": 198,
+      "positionOffset": 355236,
+      "normalOffset": 357612,
+      "indexOffset": 359988
+    },
+    {
+      "name": "iPad_body_front",
+      "group": "ipad",
+      "material": "ipad-frame",
+      "vertices": 198,
+      "indices": 198,
+      "positionOffset": 360780,
+      "normalOffset": 363156,
+      "indexOffset": 365532
+    },
+    {
+      "name": "iPad_lock_key",
+      "group": "ipad",
+      "material": "lock-key",
+      "vertices": 1572,
+      "indices": 1572,
+      "positionOffset": 366324,
+      "normalOffset": 385188,
+      "indexOffset": 404052
+    }
+  ]
+}

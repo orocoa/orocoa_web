@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/orocoa/TuneShape",
+  "website": "https://kai-nex.com/tuneshape/",
+  "cover": "/media/tuneshape-approved-blue-20261018.webp",
+  "width": 1620,
+  "height": 971,
+  "category": {
+    "en": "INTERACTIVE MOTION LAB",
+    "zh": "交互动效实验台"
+  },
+  "year": {
+    "en": "2026",
+    "zh": "2026"
+  },
+  "summary": {
+    "en": "Explore, tune and export interactive UI motion.",
+    "zh": "体验、调节并导出 UI 动效。"
+  },
+  "description": {
+    "en": [
+      "TuneShape is an interactive UI motion playground. Browse effects, compare before and after, adjust the parameters and try the interaction directly.",
+      "The preview, explanations, Motion parameters and exportable JSON come from the same configuration. Import an exported JSON file to restore the effect; observation speed stays separate from the saved configuration.",
+      "Try the live demo to explore the playground. You can also discover the other projects on GitHub, read their READMEs and give a project a Star if it helps you."
+    ],
+    "zh": [
+      "TuneShape 是一个可交互的 UI 动效实验台。按用途浏览动效，对比调整前后，修改参数后直接体验交互。",
+      "预览、文字说明、Motion 参数与可导出的 JSON 来自同一份配置；重新导入 JSON 可以还原动效，观察倍速不会写入保存的配置。",
+      "可以打开在线演示体验，也欢迎到 GitHub 查看其他项目，从 README 开始；如果对你有帮助，欢迎给项目一个 Star。"
+    ]
+  },
+  "status": "ready"
+}

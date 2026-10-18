@@ -1,0 +1,33 @@
+@import url("/vi/fonts.css");
+/* Shared chrome only. Page layouts and artwork are owned by their modules. */
+:root { --vi-focus-current:var(--vi-focus); }
+::selection { background:var(--vi-focus); color:var(--vi-surface); }
+:where(a,button,input,summary):focus-visible { outline:2px solid var(--vi-focus-current); outline-offset:5px; }
+:where(a,button) .vi-icon { pointer-events:none; }
+.vi-inline { width:var(--vi-icon-inline); height:var(--vi-icon-inline); }
+.vi-link { display:inline-flex; align-items:center; gap:6px; }
+.vi-text-action { display:inline-flex; align-items:center; gap:8px; min-height:var(--vi-target); padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; font:inherit; color:var(--vi-ink); cursor:pointer; }
+.vi-text-action:hover { background:transparent; text-decoration:underline; text-underline-offset:4px; }
+.vi-text-action[data-tone=secondary] { color:var(--vi-text-secondary); }
+.vi-text-action[data-tone=danger] { color:var(--vi-danger); }
+.vi-text-action:disabled { color:var(--vi-text-secondary); cursor:default; text-decoration:none; }
+.vi-status { display:flex; align-items:center; gap:8px; color:var(--vi-text-secondary); }
+.vi-status[data-state=error] { color:var(--vi-error); }
+.vi-status[data-state=loading] .vi-icon { color:var(--vi-focus-current); animation:vi-spin .82s linear infinite; }
+@keyframes vi-spin { to { transform:rotate(360deg); } }
+@media(prefers-reduced-motion:reduce) { .vi-status[data-state=loading] .vi-icon { animation:none; } }
+
+:root { font-optical-sizing:auto; font-stretch:normal; }
+input,textarea,select,code,kbd,samp { font-family:var(--vi-font-ui); }
+.vi-text-action:hover { color:var(--vi-focus); }
+
+/* Icon-first site controls. Page positioning and image inversion stay local. */
+:is(a,button,summary).vi-icon-control{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:var(--vi-target);min-height:var(--vi-target);padding:0;border:0;background:transparent;box-shadow:none;cursor:pointer;text-decoration:none;touch-action:manipulation}
+:is(a,button,summary).vi-icon-control>.vi-icon{width:var(--vi-icon-small);height:var(--vi-icon-small);flex:none}
+.vi-icon-control[hidden]{display:none!important}
+.vi-icon-control:focus-visible{outline:2px solid var(--vi-focus-current);outline-offset:4px}
+.vi-icon-control:disabled{cursor:default;opacity:.45}
+.vi-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+
+/* The visible second screen is white even though its homepage canvas is black. */
+html[data-page-leaving="fields"]{background:var(--vi-surface)}

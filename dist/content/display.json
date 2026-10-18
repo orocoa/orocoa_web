@@ -1,0 +1,462 @@
+{
+  "en": [
+    {
+      "id": "tuneshape",
+      "title": "TuneShape",
+      "category": "INTERACTIVE MOTION LAB",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "TuneShape",
+        "category": "INTERACTIVE MOTION LAB",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "aievent-web",
+      "title": "?",
+      "category": "PROJECT DEMO",
+      "year": "DEMO",
+      "carouselFit": "contain",
+      "layoutReference": {
+        "title": "?",
+        "category": "PROJECT DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "reprise",
+      "title": "Reprise",
+      "category": "GIT WORKSPACE",
+      "year": "2026",
+      "carouselFit": "contain",
+      "layoutReference": {
+        "title": "Reprise",
+        "category": "GIT WORKSPACE",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "mac-setup",
+      "title": "Mac Setup",
+      "category": "INTERACTIVE GUIDE",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Mac Setup",
+        "category": "INTERACTIVE GUIDE",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "ariadne",
+      "title": "Ariadne",
+      "category": "AI APPLICATION",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Ariadne",
+        "category": "AI APPLICATION",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "aix-origin",
+      "title": "Spark",
+      "category": "AI × COLLABORATION",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Spark",
+        "category": "AI × COLLABORATION",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "design-01",
+      "title": "Design Demo 01",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 01",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-02",
+      "title": "Design Demo 02",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 02",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-03",
+      "title": "Design Demo 03",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 03",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-04",
+      "title": "Design Demo 04",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 04",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-05",
+      "title": "Design Demo 05",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 05",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-06",
+      "title": "Design Demo 06",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 06",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-07",
+      "title": "Design Demo 07",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 07",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-08",
+      "title": "Design Demo 08",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 08",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-09",
+      "title": "Design Demo 09",
+      "category": "DESIGN DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 09",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "story-catchers",
+      "title": "Creative Demo 01",
+      "category": "CREATIVE DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 01",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "homegrow-plastic",
+      "title": "Creative Demo 02",
+      "category": "CREATIVE DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 02",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "photography",
+      "title": "Creative Demo 03",
+      "category": "CREATIVE DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 03",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "mupahkc",
+      "title": "Creative Demo 04",
+      "category": "CREATIVE DEMO",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 04",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    }
+  ],
+  "zh": [
+    {
+      "id": "tuneshape",
+      "title": "TuneShape",
+      "category": "交互动效实验台",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "TuneShape",
+        "category": "INTERACTIVE MOTION LAB",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "aievent-web",
+      "title": "?",
+      "category": "项目演示",
+      "year": "DEMO",
+      "carouselFit": "contain",
+      "layoutReference": {
+        "title": "?",
+        "category": "PROJECT DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "reprise",
+      "title": "倒带",
+      "category": "版本工作台",
+      "year": "2026",
+      "carouselFit": "contain",
+      "layoutReference": {
+        "title": "Reprise",
+        "category": "GIT WORKSPACE",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "mac-setup",
+      "title": "Mac设置推荐",
+      "category": "交互指南",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Mac Setup",
+        "category": "INTERACTIVE GUIDE",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "ariadne",
+      "title": "衡",
+      "category": "AI 应用",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Ariadne",
+        "category": "AI APPLICATION",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "aix-origin",
+      "title": "火花",
+      "category": "AI × 协作",
+      "year": "2026",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Spark",
+        "category": "AI × COLLABORATION",
+        "year": "2026"
+      }
+    },
+    {
+      "id": "design-01",
+      "title": "设计演示 01",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 01",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-02",
+      "title": "设计演示 02",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 02",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-03",
+      "title": "设计演示 03",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 03",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-04",
+      "title": "设计演示 04",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 04",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-05",
+      "title": "设计演示 05",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 05",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-06",
+      "title": "设计演示 06",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 06",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-07",
+      "title": "设计演示 07",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 07",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-08",
+      "title": "设计演示 08",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 08",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "design-09",
+      "title": "设计演示 09",
+      "category": "设计示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Design Demo 09",
+        "category": "DESIGN DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "story-catchers",
+      "title": "创作演示 01",
+      "category": "创作示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 01",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "homegrow-plastic",
+      "title": "创作演示 02",
+      "category": "创作示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 02",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "photography",
+      "title": "创作演示 03",
+      "category": "创作示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 03",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    },
+    {
+      "id": "mupahkc",
+      "title": "创作演示 04",
+      "category": "创作示例",
+      "year": "DEMO",
+      "carouselFit": "cover",
+      "layoutReference": {
+        "title": "Creative Demo 04",
+        "category": "CREATIVE DEMO",
+        "year": "DEMO"
+      }
+    }
+  ]
+}

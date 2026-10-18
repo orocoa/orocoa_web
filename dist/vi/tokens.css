@@ -1,0 +1,47 @@
+/* Shared visual identity tokens. Edit these values directly. */
+:root {
+  --vi-canvas: #fafafa;
+  --vi-surface: #ffffff;
+  --vi-ink: #111111;
+  --vi-muted: #666666;
+  --vi-text-secondary: #666666;
+  --vi-line: #d9d9d9;
+  --vi-action: #111111;
+  --vi-action-hover: #333333;
+  --vi-focus: #2447d8;
+  --vi-processing: #2447d8;
+  --vi-conversation: #f2f2f2;
+  --vi-dialog: #ffffff;
+  --vi-danger: #111111;
+  --vi-error: #111111;
+  --vi-warning: #666666;
+  --vi-folder-back: #e8e8e8;
+  --vi-folder-front: #fafafa;
+  --vi-folder-transition: #ededed;
+  --vi-folder-paper-back: #f0f0f0;
+  --vi-folder-paper-mid: #f5f5f5;
+  --vi-site-background: #000000;
+  --vi-font-ui: "Bricolage Grotesque", "PersonalWeb Han", "Source Han Sans SC", sans-serif;
+  --vi-font-mono: var(--vi-font-ui);
+  --vi-icon-small: 20px;
+  --vi-icon-inline: 14px;
+  --vi-target: 44px;
+  --vi-inverse-text: var(--vi-surface);
+  --vi-inverse-secondary: var(--vi-line);
+  --vi-inverse-muted: color-mix(in srgb, var(--vi-line) 72%, var(--vi-ink));
+  --vi-inverse-line: var(--vi-action-hover);
+  --vi-canvas-clear: color-mix(in srgb, var(--vi-canvas) 0%, transparent);
+  --vi-overlay: color-mix(in srgb, var(--vi-dialog) 96%, transparent);
+  --vi-backdrop: color-mix(in srgb, var(--vi-ink) 70%, transparent);
+  --vi-shadow: 0 20px 60px color-mix(in srgb, var(--vi-ink) 8%, transparent);
+  --vi-shadow-soft: rgba(17,17,17,.10);
+  --vi-shadow-medium: rgba(17,17,17,.22);
+  --vi-shadow-clear: rgba(17,17,17,0);
+  --vi-motion-exit: 220ms;
+  --vi-motion-enter: 620ms;
+  --vi-motion-exit-phone: 160ms;
+  --vi-motion-enter-phone: 320ms;
+  --vi-motion-ease: cubic-bezier(.22,1,.36,1);
+  --vi-motion-exit-ease: cubic-bezier(.65,0,.35,1);
+  --vi-motion-distance: 18px;
+}

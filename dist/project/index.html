@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>orocoa — Project</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-orocoa-20260929.png"><meta name="description" content="Public GitHub projects and interactive cover demos.">
+  <link rel="icon" type="image/png" href="/assets/favicon-orocoa-20260929.png">
+  <link rel="stylesheet" href="/vi/tokens.css"><link rel="stylesheet" href="/vi/icons.css"><link rel="stylesheet" href="/vi/base.css">
+  <link rel="stylesheet" href="/assets/document-preview.css"><link rel="stylesheet" href="/project/project.css">
+  <script type="module" src="/project/app.js"></script>
+  <script type="module" src="/vi/page-motion.js"></script>
+</head>
+<body data-view="project" data-nav-view="project">
+  <a class="project-skip" href="#project-list">Skip to project index</a>
+  <header class="project-header">
+    <a class="project-home vi-icon-control" href="/#fields" aria-label="Back to selected work"><span class="vi-icon" data-icon="chevron-left" aria-hidden="true"></span></a>
+    <nav class="project-navigation" aria-label="Project navigation">
+      <a class="project-tab project-tab-about" data-surface="about" href="/project/about/?project=tuneshape"><span>About</span></a>
+      <a class="project-tab project-tab-index" data-surface="project" href="/project/" aria-current="page"><span>Project</span></a>
+    </nav>
+  </header>
+  <main id="project-main">
+    <section id="project-overview" aria-label="All work">
+      <div class="project-stage"><canvas id="project-canvas" aria-label="Project carousel. Use the project index or arrow buttons to select a work."></canvas><a class="project-fallback" href="/project/about/?project=tuneshape" hidden><img alt="" width="768" height="512"></a></div>
+      <div id="project-loader" aria-hidden="true">000</div>
+      <div class="project-caption"><div class="project-number project-meta" data-meta="number">
+        <div class="project-meta-goo" aria-hidden="true"><div class="project-meta-layer"><div><span></span><span></span></div></div><div class="project-meta-layer"><div><span></span><span></span></div></div></div>
+        <div class="project-meta-plain"><div><span id="project-number">01</span><span></span></div></div>
+      </div><div class="project-copy project-meta" data-meta="left">
+        <div class="project-meta-goo" aria-hidden="true"><div class="project-meta-layer"><div class="project-caption-row"><span class="project-caption-title"></span></div></div><div class="project-meta-layer"><div class="project-caption-row"><span class="project-caption-title"></span></div></div></div>
+        <div class="project-meta-plain"><div class="project-caption-row"><h1 class="project-caption-title" id="project-name">TuneShape</h1></div></div>
+      <div class="project-context project-meta" data-meta="right">
+        <div class="project-meta-goo" aria-hidden="true"><div class="project-meta-layer"><div class="project-context-row"><span class="project-caption-category"></span><span></span></div></div><div class="project-meta-layer"><div class="project-context-row"><span class="project-caption-category"></span><span></span></div></div></div>
+        <div class="project-meta-plain"><div class="project-context-row"><p class="project-caption-category" id="project-category"></p><p id="project-year"></p></div></div>
+      </div>
+      </div></div>
+      <button id="project-menu-toggle" class="vi-icon-control" type="button" aria-label="Choose a project" aria-controls="project-list" aria-expanded="false"><span class="vi-icon" data-icon="menu" aria-hidden="true"></span></button>
+      <button id="project-menu-dismiss" type="button" aria-label="Close project navigation" tabindex="-1"></button>
+      <nav class="project-list" id="project-list" aria-label="All projects"><p>Loading projects…</p></nav>
+      <footer class="project-controls"><div><button class="vi-icon-control" data-step="-1" type="button" aria-label="Previous project"><span class="vi-icon" data-icon="chevron-left" aria-hidden="true"></span></button><span id="project-count">01 / 19</span><button class="vi-icon-control" data-step="1" type="button" aria-label="Next project"><span class="vi-icon" data-icon="chevron-right" aria-hidden="true"></span></button></div></footer>
+    </section>
+    <section id="project-about" aria-label="About the selected project" hidden><article id="project-details"></article></section>
+  </main>
+  <svg class="project-meta-filter" aria-hidden="true" focusable="false"><defs><filter id="name-goo" x="-20%" y="-100%" width="140%" height="300%" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 400 -132"/></filter></defs></svg>
+  <p class="vi-sr-only" id="project-status" role="status" aria-live="polite"></p>
+  <noscript><p>View <a href="https://github.com/orocoa">public source and projects on GitHub</a>.</p></noscript>
+</body>
+</html>

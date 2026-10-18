@@ -1,0 +1,63 @@
+/* The Work landing is also the first, full-screen frame inside the MacBook.
+   Overlap that viewport instead of scrolling a second copy into view. */
+html { overflow-anchor: none; }
+.is-3d .device-story {
+  position: relative;
+  z-index: 4;
+  /* 440vh of camera travel, plus the overlapping full-screen stage. */
+  height: 540dvh;
+  margin-top: -100dvh;
+  pointer-events: none;
+}
+.device-story .story-stage {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: clip;
+  background: var(--vi-surface);
+}
+.device-story[data-start] .story-stage { visibility: hidden; }
+.device-story .screen-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transform-origin: 0 0;
+  background: var(--vi-surface);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.device-story .real-fields,
+.device-story .profile-arrival { position: relative; width: 100%; height: 100%; }
+.device-story .real-fields > #fields {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.device-story #fields :is(.fields-header, .field-grid) { opacity: 1; transform: none; }
+.device-story #fields .field-line-inner { transform: none; transition: none; }
+/* The live chapter is a single projected screen during the device sequence.
+   Finish hover/reveal motion on entry and flatten the glyph layers; otherwise
+   their separate raster/clip updates leave rectangular seams while scaling. */
+.device-story #fields * { transition: none !important; }
+.device-story #fields .fields-prompt-char { transform: none !important; will-change: auto; }
+.device-story #fields:not(.selected-work) :is(.field-image, .field-action) { visibility: hidden; }
+.device-story .selected-work :is(.fields-header,.selected-work-label,.field-grid,.field,.all-work) { opacity: 1; translate: none; clip-path: none; }
+.device-story .screen-layer--destination,
+.device-story .profile-arrival { background: var(--vi-ink); }
+.device-story .screen-layer--destination { box-shadow: 0 0 0 3px var(--vi-ink); }
+.device-story .arrival-seed {
+  position: absolute;
+  left: calc(50% - 3.5px);
+  top: 49%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--vi-processing);
+}
+.device-story #scene { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; }
+.is-3d .transition-profile { margin-top: -100dvh; z-index: 5; visibility: hidden; }
+.is-3d .transition-profile[data-active] { visibility: visible; }
+.is-3d[data-device-terminal] .device-story .story-stage { visibility: hidden; }
+@media (max-width:700px) and (max-aspect-ratio:3/4), (max-height:500px) and (min-aspect-ratio:4/3) and (pointer:coarse) { .is-3d .device-story { height: 460dvh; } }

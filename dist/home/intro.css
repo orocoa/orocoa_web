@@ -1,0 +1,17 @@
+/* The loader's first paint is covered by critical styles in index.html. */
+html[data-intro],html[data-intro] body{overflow:hidden!important;overscroll-behavior:none}
+html[data-intro] #home-loader{touch-action:none}
+html[data-intro="morphing"] #home-loader,html[data-intro="revealing"] #home-loader{background:transparent}
+html[data-intro="morphing"] .loader-number,html[data-intro="revealing"] .loader-number{visibility:hidden}
+html[data-intro="loading"] .greeting,html[data-intro="morphing"] .greeting,
+html[data-intro="loading"] .languages,html[data-intro="morphing"] .languages,
+html[data-intro="loading"] .enter-fields,html[data-intro="morphing"] .enter-fields{visibility:hidden}
+.loader-number{will-change:top;user-select:none}
+.loader-error button{font:inherit;color:inherit;background:none;border:0;border-bottom:1px solid var(--vi-inverse-secondary);padding:4px 0;cursor:pointer}
+html[data-intro="error"] .loader-number{opacity:.3}
+[data-rise-pending]{visibility:hidden}
+.rise-source{opacity:0}
+.rise-overlay{position:absolute;inset:0;pointer-events:none;user-select:none;white-space:pre;overflow:visible}
+.rise-mask{position:absolute;display:block;overflow:hidden}
+.rise-glyph{display:block;white-space:pre;will-change:transform}
+@media(max-width:600px){.loader-number{left:47%;font-size:clamp(90px,25vw,150px);top:7%}}
