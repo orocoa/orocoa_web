@@ -31,7 +31,7 @@ test('TuneShape owns its GitHub and README links without changing existing recom
  }
  const home=await readFile(new URL('../dist/index.html',import.meta.url),'utf8');
  assert(home.includes('data-recommendation="TuneShape"'));
- assert.deepEqual([...home.matchAll(/data-recommendation="([^"]+)"/g)].map(match=>match[1]),['TuneShape','Ariadne','Reprise','More projects']);
+ assert.deepEqual([...home.matchAll(/data-recommendation="([^"]+)"/g)].map(match=>match[1]),['TuneShape','Ariadne','Reprise','Mac Setup','More projects']);
  assert(home.match(/class="profile-repositories"[^]*?href="https:\/\/github.com\/orocoa\/TuneShape"/));
 });
 test('reordering keeps covers and GitHub destinations attached to their projects in both languages and paths',async()=>{
