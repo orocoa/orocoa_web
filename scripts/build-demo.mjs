@@ -10,6 +10,14 @@ export function validateBase(base) {
  if(base!=='/'&&!/^\/[a-z][a-z0-9-]*\/$/.test(base))throw Error('Base must be / or one lowercase directory such as /webdemo/');
  return base;
 }
+export function validateSiteOrigin(value) {
+ const url=new URL(value);
+ if(url.protocol!=='https:'||url.username||url.password||url.pathname!=='/'||url.search||url.hash)throw Error('Site URL must be an HTTPS origin without a path, credentials, query or fragment');
+ return url.origin;
+}
+export function rewriteSearchURLs(source,base,origin) {
+ return source.replaceAll('https://webdemo.kai-nex.com/',origin+base);
+}
 export function rewritePublicPaths(source,base) {
  if(base==='/')return source;
  let out=source.replace(/(["'])(\/(?:assets|home|fields|vi|media|project|profile|transition|content|code|design|creative-practice|photography|macsetup|shift|about|404\.html)(?:\/|(?=["']))[^"'\s<>]*)/g,
@@ -29,6 +37,7 @@ async function sources() {
    else {
     const name=relative(sourceRoot,path).replaceAll('\\','/');
     const allowed=['.html','.js','.css','.json','.svg','.webp','.png','.woff2','.bin'];
+    if(['robots.txt','sitemap.xml'].includes(name)){files.push({path:name,bytes:await readFile(path)});continue;}
     if(name.split('/').some(part=>part.startsWith('.'))||!allowed.includes(extname(name)))throw Error('Unapproved public file: '+name);
     if(extname(name)==='.bin'&&!['home/assets/pc-final10.points.bin','transition/assets/refined-devices.bin'].includes(name))throw Error('Unapproved binary asset');
     files.push({path:name,bytes:await readFile(path)});
@@ -38,10 +47,11 @@ async function sources() {
  await walk(sourceRoot);
  return files.sort((a,b)=>a.path.localeCompare(b.path));
 }
-export async function prepareDemo({base='/webdemo/'}={}) {
+export async function prepareDemo({base='/webdemo/',siteOrigin=process.env.SITE_URL||'https://webdemo.kai-nex.com/'}={}) {
  validateBase(base);
+ const origin=validateSiteOrigin(siteOrigin);
  const source=await sources(),inputHash=hash(Buffer.concat([
-  Buffer.from(base+JSON.stringify(securityHeaders)+await readFile(import.meta.filename,'utf8')),
+  Buffer.from(base+origin+JSON.stringify(securityHeaders)+await readFile(import.meta.filename,'utf8')),
   ...source.flatMap(file=>[Buffer.from(file.path),file.bytes]),
  ]));
  const releaseRoot=resolve(projectRoot,'output/releases',inputHash.slice(0,16));
@@ -53,8 +63,8 @@ export async function prepareDemo({base='/webdemo/'}={}) {
    const css=source.find(item=>item.path==='vi/fonts.css').bytes.toString();
    if(!css.includes('SourceHanSansCN-VF.woff2'))continue;
   }
-  const text=['.html','.js','.css','.json','.svg'].includes(extname(file.path));
-  let publicText=text?rewritePublicPaths(file.bytes.toString(),base):null;
+  const text=['.html','.js','.css','.json','.svg','.txt','.xml'].includes(extname(file.path));
+  let publicText=text?rewriteSearchURLs(rewritePublicPaths(file.bytes.toString(),base),base,origin):null;
   // One version for every script/style import prevents mixed modules after an update.
   if(publicText!==null)publicText=publicText.replace(/(["'])((?:\/|\.\.?\/)[^"'\s]+\.(?:js|css))(["'])/g,
     (_,open,path,close)=>open+path+'?v='+inputHash.slice(0,16)+close);
@@ -70,13 +80,14 @@ export async function prepareDemo({base='/webdemo/'}={}) {
  const config={headers:[{source:base+'*',headers}],redirects:base==='/'?[]:[{source:base.slice(0,-1),destination:base,statusCode:308}]};
  await mkdir(siteRoot,{recursive:true});
  await writeFile(resolve(siteRoot,'edgeone.json'),JSON.stringify(config,null,2)+'\n');
- const metadata={schemaVersion:1,base,sourceSha256:inputHash,files:records,totalBytes:records.reduce((sum,file)=>sum+file.bytes,0)};
+ const metadata={schemaVersion:1,base,siteOrigin:origin,sourceSha256:inputHash,files:records,totalBytes:records.reduce((sum,file)=>sum+file.bytes,0)};
  await writeFile(resolve(releaseRoot,'manifest.json'),JSON.stringify(metadata,null,2)+'\n');
  return {releaseRoot,siteRoot,metadata,bytesByPath};
 }
 if(process.argv[1]&&pathToFileURL(resolve(process.argv[1])).href===import.meta.url) {
  const base=process.argv.find(arg=>arg.startsWith('--base='))?.slice(7)||'/webdemo/';
- const result=await prepareDemo({base});
+ const siteOrigin=process.argv.find(arg=>arg.startsWith('--site-url='))?.slice(11)||process.env.SITE_URL||'https://webdemo.kai-nex.com/';
+ const result=await prepareDemo({base,siteOrigin});
  console.log('Prepared '+result.metadata.files.length+' static files at '+result.siteRoot);
  console.log('Entry: '+result.metadata.base+'; no upload or deployment performed.');
 }

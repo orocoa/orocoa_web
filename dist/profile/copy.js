@@ -7,7 +7,7 @@ bindTranslations([
  {selector:'#recognition-title .profile-heading-label',zh:'开源推荐'},
  {selector:'.profile-role',zh:'交互网站演示'},
  {selector:'.profile-timezone',zh:'浏览公开项目。<br>如果对你有帮助，<br>欢迎给它一个 Star。'},
- {selector:'.profile-year',zh:'演示版本'},
+ {selector:'.profile-year a',zh:'orocoaweb · orocoa_web'},
  {selector:'#beijing-time',attribute:'aria-label',zh:'当前北京时间'},
  {selector:'.profile-education p:nth-child(1)',zh:'这里放置示例内容<span>可以替换成自己的故事。</span>'},
  {selector:'.profile-education p:nth-child(2)',zh:'体验页面与交互<span>真实项目请到 GitHub 查看。</span>'},

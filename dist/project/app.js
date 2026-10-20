@@ -155,7 +155,15 @@ function projectOrigin() {
     listScroll: visit.listScroll, listX: visit.listX };
 }
 function updateTitle() {
-  document.title = mode === 'about' ? `${projects[active].title} — ${text('About','关于')} — orocoa` : text('orocoa — Project','orocoa — 项目');
+  document.title = mode === 'about' ? `${projects[active].title} — ${text('About','关于')} — orocoaweb` : text('All work — orocoaweb','全部项目 — orocoaweb');
+  const canonical=document.querySelector('link[rel="canonical"]');
+  if(canonical)canonical.href=canonical.dataset.siteRoot+(mode==='about'?'project/about/?project='+projects[active].id:'project/');
+  const robots=document.querySelector('meta[name="robots"]');
+  if(robots)robots.content=mode==='about'?'noindex, follow':'index, follow, max-image-preview:large';
+  const description=mode==='about'?projects[active].summary:text('Explore the 19-cover orocoaweb project gallery, starting with TuneShape, ? / Shift, Reprise and Mac Setup. View demo details and public GitHub repositories.','浏览 orocoaweb 的 19 个项目封面、演示详情和公开 GitHub 项目。');
+  for(const selector of ['meta[name="description"]','meta[property="og:description"]','meta[name="twitter:description"]']){const tag=document.querySelector(selector);if(tag)tag.content=description;}
+  for(const selector of ['meta[property="og:title"]','meta[name="twitter:title"]']){const tag=document.querySelector(selector);if(tag)tag.content=document.title;}
+  const socialURL=document.querySelector('meta[property="og:url"]');if(socialURL&&canonical)socialURL.content=canonical.href;
 }
 function commit(next, index) {
   if (mode === 'about') { detailScroll.set(projects[active].id, scrollY); pauseVideos(); }

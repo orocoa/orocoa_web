@@ -1,10 +1,10 @@
-# orocoa_web
+# orocoaweb · orocoa_web
 
 [English](README.md) · **简体中文**
 
 [![CI](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml)
 
-由 [orocoa](https://github.com/orocoa) 维护的交互式个人网站与静态网站模板。点云开场、设备转场、项目画廊和中英文内容连接在同一条浏览路径中，可以直接运行，也可以替换内容后自行部署。
+**orocoaweb**（仓库名 **orocoa_web**）是由 [orocoa](https://github.com/orocoa) 维护的开源交互式个人网站与静态模板。点云开场、设备转场、项目画廊和中英文内容连接在同一条浏览路径中，可以直接运行，也可以替换内容后自行部署。
 
 [在线预览](https://webdemo.kai-nex.com/) · [页面截图](#页面截图) · [快速开始](#快速开始) · [问题反馈](https://github.com/orocoa/orocoa_web/issues)
 
@@ -139,6 +139,14 @@ node scripts/build-demo.mjs --base=/
 ```sh
 node scripts/build-demo.mjs --base=/webdemo/
 ```
+
+部署到自己的域名时，请显式设置 HTTPS 站点源，让标准网址、结构化标记、分享标签、robots.txt 和 sitemap.xml 指向自己的部署：
+
+```sh
+node scripts/build-demo.mjs --base=/ --site-url=https://portfolio.example.com/
+```
+
+默认站点源为 orocoaweb 官方 Demo，也可以通过环境变量 `SITE_URL` 设置。站点地图包含首页与 All work；只有封面和演示文案的详情页使用 `noindex, follow`，避免将占位内容当成独立作品收录。中英文在同一页面网址切换，因此不声明独立语言网址。搜索与分享设置见 [SEARCH.md](SEARCH.md)。
 
 命令会输出 **`output/releases/<hash>/site/`** 的实际位置。只将这个目录发布到静态托管服务。使用子路径时，保留导出的目录结构，并让托管服务在对应前缀下提供文件。
 

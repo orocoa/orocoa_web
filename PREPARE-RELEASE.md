@@ -44,3 +44,7 @@ Keep `LICENSE`, `LICENSES/`, `THIRD_PARTY_NOTICES.md`, `ASSETS.md` and `SECURITY
 A separate static project on a separate origin is recommended. The prepared EdgeOne configuration contains response headers, not account IDs or secrets. Verify real response headers and real 404 behavior on the chosen host. The public template does not configure a main site, DNS, account security, billing or monitoring.
 
 Original code is MIT licensed; retained display artwork and separately licensed dependencies have their own terms. Replace portfolio covers before representing the template as your own work.
+
+## Search metadata when deploying your own copy
+
+Set the actual HTTPS origin with `--site-url=https://portfolio.example.com/` or `SITE_URL`; keep `--base` for the path prefix. Canonical URLs, WebSite microdata, Open Graph URLs, robots.txt and sitemap.xml are rewritten together. The provided social preview uses this public repository's existing screenshot on raw.githubusercontent.com; replace that URL with your authorized screenshot for a fork. robots.txt must be served from the host root for a subpath deployment; merge its Sitemap line with the host's existing policy instead of replacing another site's robots file. See SEARCH.md.

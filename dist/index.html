@@ -18,16 +18,40 @@
     .loader-error[hidden]{display:none}
   </style>
   <script src="/assets/boot.js"></script>
-  <meta name="theme-color" content="#000000"><meta name="description" content="orocoa_web (orocoaweb) — orocoa's open-source interactive portfolio with point-cloud motion, a project carousel and bilingual demo content.">
-  <title>orocoa — Website Demo</title><link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-orocoa-20260929.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-orocoa-20260929.png">
+  <meta name="theme-color" content="#000000"><meta name="description" content="orocoaweb, also known as orocoa_web: an open-source portfolio website template by orocoa, with Three.js point-cloud motion, a project gallery and English / Chinese content.">
+  <title>orocoaweb (orocoa_web) — Open-source interactive portfolio</title><link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-orocoa-20260929.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-orocoa-20260929.png">
   <link rel="stylesheet" href="/home/style.css"><link rel="stylesheet" href="/assets/journey.css"><link rel="stylesheet" href="/fields/fields.css"><link rel="stylesheet" href="/assets/catalog/vendor/lenis.css"><link rel="stylesheet" href="/profile/profile.css">
   <link rel="stylesheet" href="/home/intro.css">
   <link rel="stylesheet" href="/transition/integrated.css">
   <script type="module" src="/project/entry.js"></script>
   <script type="module" src="/home/intro.js"></script><script type="module" src="/profile/profile.js"></script>
   <script type="module" src="/vi/page-motion.js"></script>
+  <!-- Public project identity and canonical search / sharing metadata. -->
+  <link rel="canonical" href="https://webdemo.kai-nex.com/" data-site-root="https://webdemo.kai-nex.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="orocoa">
+  <meta property="og:site_name" content="orocoaweb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="orocoaweb (orocoa_web) — Open-source interactive portfolio">
+  <meta property="og:description" content="orocoaweb, also known as orocoa_web: an open-source portfolio website template by orocoa, with Three.js point-cloud motion, a project gallery and English / Chinese content.">
+  <meta property="og:url" content="https://webdemo.kai-nex.com/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/orocoa/orocoa_web/main/docs/preview-home.png">
+  <meta property="og:image:alt" content="orocoaweb open-source website: computer point cloud and orocoa greeting">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="orocoaweb (orocoa_web) — Open-source interactive portfolio">
+  <meta name="twitter:description" content="orocoaweb, also known as orocoa_web: an open-source portfolio website template by orocoa, with Three.js point-cloud motion, a project gallery and English / Chinese content.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/orocoa/orocoa_web/main/docs/preview-home.png">
+  <meta name="twitter:image:alt" content="orocoaweb interactive portfolio template">
 </head>
 <body>
+  <div itemscope itemtype="https://schema.org/WebSite">
+    <meta itemprop="name" content="orocoaweb">
+    <meta itemprop="alternateName" content="orocoa_web">
+    <link itemprop="url" href="https://webdemo.kai-nex.com/">
+    <link itemprop="sameAs" href="https://github.com/orocoa/orocoa_web">
+  </div>
   <div id="home-loader" role="progressbar" aria-label="Loading homepage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
     <span class="loader-number" aria-hidden="true">00</span>
     <div class="loader-error" role="alert" hidden><p>Unable to finish loading. Please try again.</p><button type="button">Retry</button></div>
@@ -111,7 +135,7 @@
           <div class="profile-details">
             <p class="profile-name">orocoa</p>
             <p class="profile-role">Interactive website demo</p>
-            <p class="profile-year">Demo edition</p>
+            <p class="profile-year"><a class="profile-school-link" href="https://github.com/orocoa/orocoa_web" target="_blank" rel="noopener noreferrer">orocoaweb · orocoa_web</a></p>
             <p class="profile-location"><span class="profile-country">UTC+8: </span><time id="beijing-time" class="profile-clock" aria-label="Current time in Beijing">UTC+8</time></p>
             <div class="profile-education">
               <p>A place for sample content<span>Replace it with your own story.</span></p>

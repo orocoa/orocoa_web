@@ -8,7 +8,7 @@ export async function startPreview({port=Number(process.env.PORT||4321),base=pro
  validateBase(base);
  if(!Number.isInteger(port)||port<0||port>65535)throw Error('Invalid PORT');
  const release=await prepareDemo({base});
- const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.woff2':'font/woff2','.bin':'application/octet-stream'};
+ const types={'.txt':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8','.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.woff2':'font/woff2','.bin':'application/octet-stream'};
  const page404=release.bytesByPath.get(base+'404.html');
  const cache='public, max-age=300, must-revalidate';
  const server=createServer((request,response)=>{

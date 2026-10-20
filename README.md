@@ -1,10 +1,10 @@
-# orocoa_web
+# orocoaweb · orocoa_web
 
 **English** · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml)
 
-An interactive portfolio website and reusable static template by [orocoa](https://github.com/orocoa). It brings together a point-cloud introduction, device transitions, a project gallery, and English / Chinese content in one continuous browsing experience.
+**orocoaweb** (repository: **orocoa_web**) is an open-source interactive portfolio website and reusable static template by [orocoa](https://github.com/orocoa). It brings together a point-cloud introduction, device transitions, a project gallery, and English / Chinese content in one continuous browsing experience.
 
 [Live demo](https://webdemo.kai-nex.com/) · [Screenshots](#screenshots) · [Quick start](#quick-start) · [Report an issue](https://github.com/orocoa/orocoa_web/issues)
 
@@ -141,6 +141,14 @@ Or export for a subpath:
 ```sh
 node scripts/build-demo.mjs --base=/webdemo/
 ```
+
+For your own domain, set its HTTPS origin so canonical URLs, microdata, social tags, robots.txt and sitemap.xml refer to your deployment:
+
+```sh
+node scripts/build-demo.mjs --base=/ --site-url=https://portfolio.example.com/
+```
+
+The default origin is the official orocoaweb Demo. `SITE_URL` is the equivalent environment variable. The sitemap contains the homepage and All work; cover-only detail demos use `noindex, follow` to avoid indexing placeholder pages. Both language choices share each page URL, so no separate language URLs are declared. See [SEARCH.md](SEARCH.md) for the search and sharing setup.
 
 The command prints the resulting **`output/releases/<hash>/site/`** directory. Publish only that directory to your static host. For a subpath deployment, keep the exported directory structure and configure the host to serve the selected prefix.
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webdemo.kai-nex.com/sitemap.xml
