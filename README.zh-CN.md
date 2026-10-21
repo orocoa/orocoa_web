@@ -43,13 +43,13 @@
 
 精选作品顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。精选封面默认灰度、悬停显色；All work 与详情页封面保留原色。五个公开项目保留各自介绍，其余条目使用 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
 
-## 为什么选这个模板
+## 模板包含什么
 
-| | orocoaweb | 常见作品集脚手架 |
-| --- | --- | --- |
-| 安装 | `node scripts/serve.mjs`（无需 npm install） | 通常 `npm i` + 框架脚手架 |
-| 语言 | 中英同页滚动 | 多为单语 |
-| 动效 | 点云 + GSAP + Lenis | 静态区块 |
+| 项目 | 实现方式 |
+| --- | --- |
+| 本地预览 | 使用 Node.js 22+ 运行 `node scripts/serve.mjs`；浏览器依赖已随仓库提供，无需 `npm install`。 |
+| 语言 | 在同一页面 URL 切换简体中文与英文。 |
+| 动效 | Three.js 点云、GSAP 转场与 Lenis 滚动，支持减少动态效果偏好。 |
 
 
 ## 页面截图

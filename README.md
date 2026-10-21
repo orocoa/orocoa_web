@@ -43,13 +43,13 @@ The preview runs this public website template with demo copy, presentation cover
 
 Selected work follows **TuneShape → ? / Shift → Reprise → Mac Setup**. TuneShape is also the first entry in All work. Selected covers start in grayscale and reveal color on hover; All work and detail covers retain their original colors. Five public projects have their own introductions; other entries use demo copy. Report controls open GitHub recommendations instead of original PDFs.
 
-## Why this starter
+## Included in the template
 
-| | orocoaweb | Typical portfolio starter |
-| --- | --- | --- |
-| Install | `node scripts/serve.mjs` (no npm install) | Often `npm i` + framework scaffold |
-| Languages | EN / 中文 in one scroll | Often single language |
-| Motion | Point cloud + GSAP + Lenis | Static sections |
+| Area | Implementation |
+| --- | --- |
+| Local preview | Node.js 22+ and `node scripts/serve.mjs`; bundled browser libraries require no `npm install`. |
+| Languages | Switch between English and Simplified Chinese on the same page URL. |
+| Motion | Three.js point cloud, GSAP transitions, and Lenis scrolling, with reduced-motion support. |
 
 
 <a id="页面截图"></a>
