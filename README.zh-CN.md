@@ -3,6 +3,8 @@
 [English](README.md) · **简体中文**
 
 [![CI](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live demo](https://img.shields.io/badge/demo-webdemo.kai--nex.com-0A7EA4)](https://webdemo.kai-nex.com/)
 
 **orocoaweb**（仓库名 **orocoa_web**）是由 [orocoa](https://github.com/orocoa) 维护的开源交互式个人网站与静态模板。点云开场、设备转场、项目画廊和中英文内容连接在同一条浏览路径中，可以直接运行，也可以替换内容后自行部署。
 
@@ -40,6 +42,15 @@
 - **语言与布局**：中英文切换、手机布局，以及对减少动态效果偏好的支持。
 
 精选作品顺序为 **TuneShape → ? / Shift → Reprise → Mac Setup**，All work 第一项也是 TuneShape。精选封面默认灰度、悬停显色；All work 与详情页封面保留原色。五个公开项目保留各自介绍，其余条目使用 Demo 文案。报告入口展示 GitHub 推荐，不加载原始 PDF。
+
+## 模板包含什么
+
+| 项目 | 实现方式 |
+| --- | --- |
+| 本地预览 | 使用 Node.js 22+ 运行 `node scripts/serve.mjs`；浏览器依赖已随仓库提供，无需 `npm install`。 |
+| 语言 | 在同一页面 URL 切换简体中文与英文。 |
+| 动效 | Three.js 点云、GSAP 转场与 Lenis 滚动，支持减少动态效果偏好。 |
+
 
 ## 页面截图
 

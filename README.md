@@ -3,6 +3,8 @@
 **English** · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/orocoa/orocoa_web/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live demo](https://img.shields.io/badge/demo-webdemo.kai--nex.com-0A7EA4)](https://webdemo.kai-nex.com/)
 
 **orocoaweb** (repository: **orocoa_web**) is an open-source interactive portfolio website and reusable static template by [orocoa](https://github.com/orocoa). It brings together a point-cloud introduction, device transitions, a project gallery, and English / Chinese content in one continuous browsing experience.
 
@@ -40,6 +42,15 @@ The preview runs this public website template with demo copy, presentation cover
 - **Language and layout:** English / Chinese switching, phone layouts, and support for reduced-motion preferences.
 
 Selected work follows **TuneShape → ? / Shift → Reprise → Mac Setup**. TuneShape is also the first entry in All work. Selected covers start in grayscale and reveal color on hover; All work and detail covers retain their original colors. Five public projects have their own introductions; other entries use demo copy. Report controls open GitHub recommendations instead of original PDFs.
+
+## Included in the template
+
+| Area | Implementation |
+| --- | --- |
+| Local preview | Node.js 22+ and `node scripts/serve.mjs`; bundled browser libraries require no `npm install`. |
+| Languages | Switch between English and Simplified Chinese on the same page URL. |
+| Motion | Three.js point cloud, GSAP transitions, and Lenis scrolling, with reduced-motion support. |
+
 
 <a id="页面截图"></a>
 
